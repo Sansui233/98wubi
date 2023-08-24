@@ -2,8 +2,8 @@
 # encoding: utf-8
 
 schema:
-  schema_id: wubi98_U
-  name: "超集"
+  schema_id: wubi98_dz
+  name: "单字"
   version: "6.0"
   author:
     - 發明人 王永民
@@ -44,7 +44,6 @@ switches:
     states: [ 半,全 ]
 engine:
   filters:
-    - charset_filter@gb2312  
     - simplifier
     - "reverse_lookup_filter@ci_reverse_lookup"
     - lua_filter@new_spelling@spelling
@@ -88,14 +87,14 @@ speller:
   max_code_length: 4
   
 translator:
-  dictionary: wubi98_U.extended
+  dictionary: wubi98_dz.extended
   db_class: tabledb
   initial_quality: 100000
   enable_charset_filter: false
   enable_sentence: false
   enable_encoder: false
   encode_commit_history: false
-  max_phrase_length: 2
+  max_phrase_length: 4
   enable_completion: true
   enable_user_dict: false
   disable_user_dict_for_patterns:
@@ -103,7 +102,7 @@ translator:
 
 fixed:
   db_class: tabledb
-  dictionary: wubi98_U.extended
+  dictionary: wubi98_dz.extended
   disable_user_dict_for_patterns:
     - "^z.*$"
   enable_charset_filter: false
@@ -113,11 +112,11 @@ fixed:
   enable_user_dict: true
   encode_commit_history: false
   initial_quality: 1000
-  max_phrase_length: 2
+  max_phrase_length: 4
   
 mkst:
   db_class: tabledb
-  dictionary: wubi98_U.extended
+  dictionary: wubi98_dz.extended
   disable_user_dict_for_patterns:
     - "^z.*$"
   enable_charset_filter: false
@@ -127,14 +126,14 @@ mkst:
   enable_user_dict: false
   encode_commit_history: false
   initial_quality: 10
-  max_phrase_length: 2
+  max_phrase_length: 4
   prefix: "`"
   tag: mkst
   tips: "〔精准造词〕"
 
 rvl_zhuyin:
   db_class: tabledb
-  dictionary: wubi98_U.extended
+  dictionary: wubi98_dz.extended
   disable_user_dict_for_patterns:
     - "^z.*$"
   enable_charset_filter: false
@@ -144,7 +143,7 @@ rvl_zhuyin:
   enable_user_dict: false
   encode_commit_history: false
   initial_quality: 10
-  max_phrase_length: 2
+  max_phrase_length: 4
   prefix: "~"
   tag: zhuyin
   tips: "〔以形查音〕"
@@ -161,7 +160,7 @@ reverse_lookup:
   enable_user_dict: false
   encode_commit_history: false
   initial_quality: 100000
-  max_phrase_length: 2
+  max_phrase_length: 4
   preedit_format:
     - "xform/([nl])v/$1ü/"
     - "xform/([nl])ue/$1üe/"
@@ -183,7 +182,7 @@ rvlk1:
   extra_tags:
     - rvlk2
   initial_quality: 100000
-  max_phrase_length: 2
+  max_phrase_length: 4
   preedit_format:
     - "xform/([nl])v/$1ü/"
     - "xform/([nl])ue/$1üe/"
@@ -191,13 +190,12 @@ rvlk1:
   prefix: z
   tag: rvlk1
   tips: "〔拼音反查〕"
-    
+
 ci_reverse_lookup:
-  dictionary: wubi98_U.extended.extended
+  dictionary: wubi98_dz.extended
   tips: "〔五笔滤镜〕"
   tags:
     - rvlk2
-    
 
 simplifier:
   opencc_config: s2t.json
@@ -220,7 +218,7 @@ recognizer:
     url: "^(www[.]|https?:|ftp[.:]|mailto:|file:).*$|^[a-z]+[.].+$"
     zhuyin: "~[a-y]*?$"
     helper: '^help$'
-
+  
 history:
   input: z
   size: 1
@@ -250,4 +248,4 @@ punctuator:
   import_preset: symbols
   
 menu:
-  page_size: 9  
+  page_size: 5  
