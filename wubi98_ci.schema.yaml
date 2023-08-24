@@ -90,7 +90,7 @@ translator:
   encode_commit_history: false
   max_phrase_length: 4
   enable_completion: true
-  enable_user_dict: false
+  enable_user_dict: true
   disable_user_dict_for_patterns:
     - "^z.*$"
 fixed:
