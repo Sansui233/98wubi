@@ -6,7 +6,7 @@
 - 恢复无词组时按空格编码上屏，一是方便中英混输，二是修正空格确认编码的功能性，删除只由backspace与delete做。三是输入法不应该出现让人感到“输入失效”的行为
 - [仿 mac 亮色皮肤](https://github.com/NavisLab/rime-pifu)
 
-![Rime 98Wubi](Rime-98wubi-custom-1.jpg)
+![Rime 98Wubi](https://raw.githubusercontent.com/Sansui233/98wubi/master/Rime-98wubi-custom.jpg)
 
 ## 计划改动
 
