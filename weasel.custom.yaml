@@ -7,3 +7,11 @@ customization:
 patch:
   __include: "hot_keys:/patch"
   "style/color_scheme": macos_light
+  app_options/photoshop.exe:
+    ascii_mode: true
+  app_options/clipstudiopaint.exe:
+    ascii_mode: true
+  app_options/windowsterminal.exe:
+    ascii_mode: true
+  app_options/code.exe:
+    ascii_mode: true
