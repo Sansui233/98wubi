@@ -15,3 +15,8 @@ patch:
     ascii_mode: true
   app_options/code.exe:
     ascii_mode: true
+  app_options/fluentsearch.exe:
+    ascii_mode: true
+  app_options/listary.exe:
+    ascii_mode: true
+    
